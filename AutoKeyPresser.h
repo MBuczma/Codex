@@ -2,7 +2,11 @@
 #pragma once
 
 #include <QString>
-#include <Windows.h>
+#ifdef _WIN32
+#  include <Windows.h>
+#else
+using HWND = void *;
+#endif
 
 class AutoKeyPresser
 {

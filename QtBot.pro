@@ -33,3 +33,7 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+check.target = check
+check.commands = cd tests && qmake && $(MAKE) check
+QMAKE_EXTRA_TARGETS += check
