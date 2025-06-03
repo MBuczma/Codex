@@ -15,7 +15,7 @@
 #include <memory>
 #include <windows.h>
 
-GroupBoxControl::GroupBoxControl(QWidget *parent) //konstrukor
+GroupBoxControl::GroupBoxControl(QWidget *parent) // konstruktor
     : QWidget(parent)
     , keyTimer(std::make_unique<QTimer>(this))
     , countdownTimer(std::make_unique<QTimer>(this))
