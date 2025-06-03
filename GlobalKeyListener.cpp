@@ -2,7 +2,6 @@
 #include <QDebug>
 #include <QKeySequence>
 #include <QMetaObject>
-#ifdef _WIN32
 
 // Uchwyt do hooka systemowego (Windows Hook)
 HHOOK GlobalKeyListener::hook = nullptr;
@@ -198,12 +197,3 @@ QString GlobalKeyListener::opisVK(int vk)
     // Jeśli klawisz jest znany — zwracamy jego nazwę; jeśli nie, to np. "VK_27"
     return mapa.value(vk, QString("VK_%1").arg(vk));
 }
-#else
-HHOOK GlobalKeyListener::hook = nullptr;
-GlobalKeyListener *GlobalKeyListener::instance = nullptr;
-
-GlobalKeyListener::GlobalKeyListener(QObject *parent) : QObject(parent) {}
-GlobalKeyListener::~GlobalKeyListener() {}
-void GlobalKeyListener::start() {}
-QString GlobalKeyListener::opisVK(int) { return QString(); }
-#endif

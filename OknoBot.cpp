@@ -6,25 +6,6 @@
 #include "ui_OknoBot.h"
 
 #include "GroupBoxControl.h"
-#ifndef _WIN32
-#  define VK_SPACE 0x20
-#  define VK_RETURN 0x0D
-#  define VK_F1 0x70
-#  define VK_F2 0x71
-#  define VK_F3 0x72
-#  define VK_F4 0x73
-#  define VK_F5 0x74
-#  define VK_F6 0x75
-#  define VK_F7 0x76
-#  define VK_F8 0x77
-#  define VK_F9 0x78
-#  define VK_F10 0x79
-#  define VK_F11 0x7A
-#  define VK_F12 0x7B
-#  define VK_NUMPAD1 0x61
-#  define VK_NUMPAD2 0x62
-#  define VK_NUMPAD0 0x60
-#endif
 
 OknoBot::OknoBot(QWidget *parent)
     : QWidget(parent)

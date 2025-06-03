@@ -2,14 +2,7 @@
 #define GLOBALKEYLISTENER_H
 
 #include <QObject>
-#ifdef _WIN32
-#  include <Windows.h>
-#else
-using HHOOK = void *;
-using WPARAM = unsigned long;
-using LPARAM = long;
-using LRESULT = long;
-#endif
+#include <Windows.h>
 
 class GlobalKeyListener : public QObject
 {

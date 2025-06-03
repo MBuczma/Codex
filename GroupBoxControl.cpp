@@ -13,11 +13,7 @@
 #include <QSizePolicy>
 #include <QTimer>
 #include <memory>
-#ifdef _WIN32
-#  include <windows.h>
-#else
-inline void Beep(int, int) {}
-#endif
+#include <windows.h>
 
 GroupBoxControl::GroupBoxControl(QWidget *parent) // konstruktor
     : QWidget(parent)
